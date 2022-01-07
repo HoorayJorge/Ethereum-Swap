@@ -2,8 +2,8 @@ pragma solidity ^0.5.0;
 
 import "./Token.sol";
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-contract EtherSwap{
-    string public name="EtherSwap Instant Exchange";
+contract GarlicSwap {
+    string public name="GarlicSwap Instant Exchange";
     Token public token;
     uint public rate=100;
 

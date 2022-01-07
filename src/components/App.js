@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Web3 from 'web3'
 import Token from '../abis/Token.json'
-import EtherSwap from '../abis/EtherSwap.json'
+import GarlicSwap from '../abis/GarlicSwap.json'
 import Navbar from './Navbar'
 import Main from './Main'
 import './App.css'
@@ -36,12 +36,12 @@ class App extends Component {
 
 
      //Load EtherSwap
-   const etherSwapData = EtherSwap.networks[networkId]
+   const etherSwapData = GarlicSwap.networks[networkId]
     if(etherSwapData) {
-      const etherSwap = new web3.eth.Contract(EtherSwap.abi, etherSwapData.address)
+      const etherSwap = new web3.eth.Contract(GarlicSwap.abi, etherSwapData.address)
       this.setState({ etherSwap })
     } else {
-      window.alert('EtherSwap contract not deployed to detected network.')
+      window.alert('GarlicSwap contract not deployed to detected network.')
     }
 
    this.setState({ loading: false })
